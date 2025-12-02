@@ -14,5 +14,12 @@ MAX. PUNKTE: 10
 // Die Elemente aus l1 kommen vor denen aus l2 in der Ergebnisliste vor.
 func SymmetricDifference(l1, l2 []int) []int {
 	// TODO
+	result := []int{}
+	for _, el1 := range l1 {
+		if !Contains(l2, el1) {
+			result = append(result, el1)
+		}
+	}
+	for 
 	return []int{}
 }
