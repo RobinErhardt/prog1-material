@@ -20,6 +20,19 @@ func SymmetricDifference(l1, l2 []int) []int {
 			result = append(result, el1)
 		}
 	}
-	for 
-	return []int{}
+	for _, el2 := range l2 {
+		if !Contains(l1, el2) {
+			result = append(result, el2)
+		}
+	}
+	return result
+}
+
+func Contains(l []int, el int) bool {
+	for _, e := range l {
+		if e == el {
+			return true
+		}
+	}
+	return false
 }
