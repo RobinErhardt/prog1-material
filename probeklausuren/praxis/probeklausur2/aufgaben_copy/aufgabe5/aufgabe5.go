@@ -11,12 +11,6 @@ MAX. PUNKTE: 10
 // Gibt es mehrere solche Einträge, soll nur der erste ersetzt werden.
 func ReplaceEn(dict []Entry, de, en string) {
 	// TODO
-	for i := 0; len(dict) > i; i++ {
-		if dict[i].De == de && dict[i].En != en {
-			dict[i].En = en
-			return
-		}
-	}
 }
 
 // Entry repräsentiert einen Eintrag in einem Wörterbuch

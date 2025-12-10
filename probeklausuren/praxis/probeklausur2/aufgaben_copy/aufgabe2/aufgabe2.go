@@ -7,14 +7,13 @@ package aufgabe2
 // FilterDigits erwartet einen String s und liefert einen String zurück,
 // der aus s entsteht, indem alle Ziffern entfernt werden.
 // Alle anderen Zeichen sollen unverändert bleiben.
-
 func FilterDigits(s string) string {
 	result := ""
+	// TODO
 	for _, r := range s {
-		if r < '0' || r > '9' {
+		if !('0'<=r && r<='9') {
 			result += string(r)
 		}
 	}
-	// TODO
 	return result
 }
