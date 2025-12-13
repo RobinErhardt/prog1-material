@@ -11,7 +11,7 @@ func FilterDigits(s string) string {
 	result := ""
 	// TODO
 	for _, r := range s {
-		if !('0'<=r && r<='9') {
+		if !('0' <= r && r <= '9') {
 			result += string(r)
 		}
 	}

@@ -1,5 +1,7 @@
 package aufgabe3
 
+import "math"
+
 /* AUFGABENSTELLUNG: Vervollständigen Sie die unten stehende Funktion.
  * RANDBEDINGUNG: Die Funktion muss rekursiv sein.
  * ERREICHBARE PUNKTE: 10
@@ -13,11 +15,15 @@ func CountSquares(list []int) int {
 		return 0
 	}
 	head := list[0]
-	result :=  CountSquares(list[1:])
+	result := CountSquares(list[1:])
 
+	if IsSquare(head) {
+		result++
+	}
 	return result
 }
 
-func IsSquare(head int) int {
-	
+func IsSquare(n int) bool {
+	r := int(math.Sqrt(float64(n)))
+	return r*r == n
 }

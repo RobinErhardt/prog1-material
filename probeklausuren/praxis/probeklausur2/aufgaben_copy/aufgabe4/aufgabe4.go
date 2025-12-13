@@ -15,5 +15,16 @@ package aufgabe4
 func ElementSums(l1, l2 []int) []int {
 	result := []int{}
 	// TODO
+	max := max(len(l1), len(l2))
+	c1, c2 := 0, 0
+	for i := 0; i < max; i++ {
+		if i < len(l1) {
+			c1 = l1[i]
+		}
+		if i < len(l2) {
+			c2 = l2[i]
+		}
+		result = append(result, c1 + c2)
+	}
 	return result
 }
